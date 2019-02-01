@@ -1,0 +1,12 @@
+library(quantmod)
+library(rugarch)
+library(rmgarch)
+startdate = as.Date("2008-01-03")
+enddate = as.Date("2018-04-30")
+
+getSymbols("LT.NS", from = startdate, to = enddate)
+getSymbols("TCS.NS", from = startdate, to = enddate)
+getSymbols("ITC.NS", from = startdate, to = enddate)
+head(ITC.NS)
+str(ITC.NS)
+chartSeries(ITC.NS)
